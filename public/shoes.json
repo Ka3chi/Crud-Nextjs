@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "brand": "Fila",
+        "size": 20,
+        "color": "Red-Black"
+    },
+    {
+        "id": 2,
+        "brand": "Nike",
+        "size": 22,
+        "color": "Dark-Blue"
+    },
+    {
+        "id": 3,
+        "brand": "World Balance",
+        "size": 10,
+        "color": "Yellow-Green"
+    }
+]
+  
