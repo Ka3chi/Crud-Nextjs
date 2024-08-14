@@ -1,12 +1,25 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+interface WeatherData {
+  name: string;
+  main: {
+    temp: number;
+  };
+  weather: Array<{
+    description: string;
+  }>;
+}
+
+
 const WeatherApi = () => {
+
+  const [weather, setWeather] = useState<WeatherData | null>(null);
+
   //variables for api
   const Apikey = '2675f5dc6be3f4048c06c7fd8c89f1b7';
     //useStates
   const [city, setCity] = useState('');
-  const [weather, setWeather] = useState(null);
   const [error, setError] = useState('');
   const [date, setDate] = useState<string>('');
 
@@ -35,7 +48,7 @@ const WeatherApi = () => {
     setError('');
     try {
         //api fetch
-        const response = await axios.get(
+        const response = await axios.get<WeatherData>(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Apikey}&units=metric`
         );
       setWeather(response.data);
