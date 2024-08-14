@@ -9,6 +9,8 @@ npm i
 npm install next@14.2.5 react@18 react-dom@18
 npm i axios
 npm i tailwindcss-animated
+
+//this is to run the server
 npm run dev
 ```
 
