@@ -13,6 +13,7 @@ npm i tailwindcss-animated
 //this is to run the server
 npm run dev
 ```
+The data was in the public/shoes.json
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
